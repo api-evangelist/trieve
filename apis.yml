@@ -1,0 +1,259 @@
+aid: trieve
+url: https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/apis.yml
+name: Trieve
+kind: company
+description: >-
+  Trieve (Devflow, Inc.) is an open-source, all-in-one search, recommendations,
+  RAG, and analytics platform delivered as a REST API. The backend is written in
+  Rust (Actix-web) and exposes endpoints for managing organizations, datasets,
+  chunks, chunk groups, files, search, topics / messages (LLM chat), web crawls,
+  events, analytics, and experiments. Trieve Cloud is hosted at api.trieve.ai;
+  the same server can be self-hosted from the devflowinc/trieve repository.
+  Official SDKs are published for TypeScript and Python.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Search
+  - RAG
+  - Vector Search
+  - Hybrid Search
+  - Recommendations
+  - Analytics
+  - Open Source
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: trieve:rest-api
+    name: Trieve REST API
+    description: >-
+      Production REST API for Trieve Cloud. Organizes resources around
+      organizations, datasets, chunks, chunk groups, files, search, topics,
+      messages, crawls, analytics, events, experiments, and billing. Documented
+      with OpenAPI and rendered via Redoc.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - REST
+      - OpenAPI
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+      - type: Redoc
+        url: https://api.trieve.ai/redoc
+  - aid: trieve:chunk
+    name: Trieve Chunk API
+    description: >-
+      Manage chunks - the individual searchable units of content stored in a
+      dataset - including create, update, delete, get, and bulk operations.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Chunks
+      - Content
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:chunk-group
+    name: Trieve Chunk Group API
+    description: >-
+      Group chunks into bookmark-style folders for organization, recommendations,
+      and group-scoped search within a dataset.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Groups
+      - Organization
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:dataset
+    name: Trieve Dataset API
+    description: >-
+      Create and configure datasets that hold chunks, chunk groups, and search /
+      RAG configuration for a workload.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Datasets
+      - Configuration
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:search
+    name: Trieve Search API
+    description: >-
+      Run vector, full-text, and hybrid search across a dataset, with filters,
+      boosts, re-ranking, and highlights.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Search
+      - Hybrid
+      - Vector
+      - Full-Text
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:file
+    name: Trieve File API
+    description: >-
+      Upload files (up to 1 GB), extract text, and chunk them into a dataset.
+      Asynchronous - completion is signaled via the Events API.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Files
+      - Ingestion
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:topic
+    name: Trieve Topic API
+    description: >-
+      Topics persist conversational state for generative-AI chat sessions backed
+      by a Trieve dataset.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Topics
+      - Chat
+      - RAG
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:message
+    name: Trieve Message API
+    description: >-
+      Messages are turns within a topic; the Message API drives RAG completions,
+      streaming responses, and citation-aware chat against a dataset.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Messages
+      - RAG
+      - Streaming
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:crawl
+    name: Trieve Crawl API
+    description: >-
+      Create and manage web crawls that ingest pages into a dataset for search
+      and RAG.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Crawl
+      - Ingestion
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:analytics
+    name: Trieve Analytics API
+    description: >-
+      Query search and RAG analytics - top queries, no-result queries, latency,
+      click-through, and experiment outcomes.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Analytics
+      - Search Analytics
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:events
+    name: Trieve Events API
+    description: >-
+      Server-sent notifications about asynchronous work such as file processing,
+      crawl completion, and chunk ingestion.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Events
+      - Webhooks
+      - Async
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:organization
+    name: Trieve Organization API
+    description: >-
+      Manage organizations, roles, and members.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Organization
+      - Admin
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:auth
+    name: Trieve Auth API
+    description: >-
+      Registration, login, and session handling for Trieve users.
+    humanURL: https://docs.trieve.ai/api-reference
+    baseURL: https://api.trieve.ai
+    tags:
+      - Auth
+      - Identity
+    properties:
+      - type: Documentation
+        url: https://docs.trieve.ai/api-reference
+  - aid: trieve:typescript-sdk
+    name: Trieve TypeScript SDK
+    description: >-
+      Official TypeScript / JavaScript client library for the Trieve REST API.
+    humanURL: https://ts-sdk.trieve.ai
+    baseURL: https://github.com/devflowinc/trieve
+    tags:
+      - SDK
+      - TypeScript
+      - JavaScript
+    properties:
+      - type: Documentation
+        url: https://ts-sdk.trieve.ai
+      - type: Repository
+        url: https://github.com/devflowinc/trieve
+  - aid: trieve:python-sdk
+    name: Trieve Python SDK
+    description: >-
+      Official Python client library (trieve-py-client) for the Trieve REST API.
+    humanURL: https://pypi.org/project/trieve-py-client/
+    baseURL: https://github.com/devflowinc/trieve
+    tags:
+      - SDK
+      - Python
+    properties:
+      - type: Documentation
+        url: https://pypi.org/project/trieve-py-client/
+      - type: Repository
+        url: https://github.com/devflowinc/trieve
+  - aid: trieve:open-source
+    name: Trieve Open Source Server
+    description: >-
+      Self-hostable Trieve server (Rust / Actix-web), dashboard, search and chat
+      UIs, ingestion / file / delete workers, batch-ETL utilities, pdf2md
+      converter, and Helm charts for Kubernetes deployment.
+    humanURL: https://github.com/devflowinc/trieve
+    baseURL: https://github.com/devflowinc/trieve
+    tags:
+      - Open Source
+      - Self-Hosted
+      - Rust
+    properties:
+      - type: Repository
+        url: https://github.com/devflowinc/trieve
+common:
+  - type: Website
+    url: https://trieve.ai/
+  - type: Documentation
+    url: https://docs.trieve.ai/
+  - type: GitHub
+    url: https://github.com/devflowinc
+  - type: Pricing
+    url: https://trieve.ai/pricing
+  - type: Blog
+    url: https://trieve.ai/blog
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
