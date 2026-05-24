@@ -254,6 +254,8 @@ common:
     url: https://trieve.ai/pricing
   - type: Blog
     url: https://trieve.ai/blog
+  - type: LLMsTxt
+    url: https://docs.trieve.ai/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
