@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Trieve REST API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Chunk",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create or upsert chunk(s)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/chunk",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Creates new chunks. A chunk with the same tracking_id as an existing chunk\nwill cause the request to fail. Bulk uploads are capped at 120 chunks\nper request.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Dataset",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/dataset"
+          },
+          "docs": "Create a new dataset within an organization. Caller must be an\norganization owner.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "File",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/file",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Upload a file to the S3 bucket attached to a dataset. Supports naive\nchunking via Apache Tika or vision-LLM markdown conversion.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Topic",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a chat topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/topic",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a new chat topic. Topics coordinate conversation message history\nof gen-AI chat sessions and are attached to an owner_id.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Message",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/message",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a message attached to a topic to coordinate memory of gen-AI\nchat sessions.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
