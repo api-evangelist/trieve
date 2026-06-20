@@ -10,7 +10,7 @@ description: >-
   events, analytics, and experiments. Trieve Cloud is hosted at api.trieve.ai;
   the same server can be self-hosted from the devflowinc/trieve repository.
   Official SDKs are published for TypeScript and Python.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Search
   - RAG
