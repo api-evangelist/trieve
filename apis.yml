@@ -244,6 +244,10 @@ apis:
       - type: Repository
         url: https://github.com/devflowinc/trieve
 common:
+  - type: DomainSecurity
+    url: security/trieve-domain-security.yml
+  - type: Authentication
+    url: authentication/trieve-authentication.yml
   - type: Website
     url: https://trieve.ai/
   - type: Documentation
