@@ -2,11 +2,10 @@
   "repo": "trieve",
   "feeds": [
     {
-      "source": "https://trieve.ai/blog",
-      "saved": 0,
-      "error": "ECONNREFUSED on fetch"
+      "source": "https://trieve.ai/pricing",
+      "error": "URLError"
     }
   ],
-  "fetched": "2026-06-27T13:17:27Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
