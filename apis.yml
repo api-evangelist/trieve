@@ -244,6 +244,8 @@ apis:
       - type: Repository
         url: https://github.com/devflowinc/trieve
 common:
+  - type: AgenticAccess
+    url: agentic-access/trieve-agentic-access.yml
   - type: DomainSecurity
     url: security/trieve-domain-security.yml
   - type: Authentication
