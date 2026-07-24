@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Trieve REST Chunk Topic API
+  version: '1'
+  description: 'Trieve REST API for search, recommendations, RAG, and analytics. Endpoints
+
+    derived from https://docs.trieve.ai/api-reference and the Redoc spec at
+
+    https://api.trieve.ai/redoc.
+
+    '
+  contact:
+    name: Trieve (Devflow, Inc.)
+    url: https://docs.trieve.ai/api-reference
+servers:
+- url: https://api.trieve.ai
+  description: Trieve Cloud (production)
+- url: http://localhost:8090
+  description: Self-hosted (local dev)
+security:
+- ApiKeyAuth: []
+tags:
+- name: Topic
+paths:
+  /api/topic:
+    post:
+      tags:
+      - Topic
+      summary: Create a chat topic
+      description: 'Create a new chat topic. Topics coordinate conversation message history
+
+        of gen-AI chat sessions and are attached to an owner_id.
+
+        '
+      parameters:
+      - in: header
+        name: TR-Dataset
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Topic created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Trieve API key. User or API key must have admin or owner role on the
+
+        targeted dataset''s organization.
+
+        '
