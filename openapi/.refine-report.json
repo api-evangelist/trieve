@@ -1,0 +1,22 @@
+{
+  "provider": "trieve",
+  "sources": [
+    "trieve-chunk-api-openapi.yml",
+    "trieve-dataset-api-openapi.yml",
+    "trieve-file-api-openapi.yml",
+    "trieve-message-api-openapi.yml",
+    "trieve-topic-api-openapi.yml"
+  ],
+  "outputs": [
+    "trieve-chunk-api-openapi.yml",
+    "trieve-dataset-api-openapi.yml",
+    "trieve-file-api-openapi.yml",
+    "trieve-message-api-openapi.yml",
+    "trieve-topic-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

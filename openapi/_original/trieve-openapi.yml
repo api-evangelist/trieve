@@ -1,0 +1,116 @@
+openapi: 3.1.0
+info:
+  title: Trieve REST API
+  version: "1"
+  description: |
+    Trieve REST API for search, recommendations, RAG, and analytics. Endpoints
+    derived from https://docs.trieve.ai/api-reference and the Redoc spec at
+    https://api.trieve.ai/redoc.
+  contact:
+    name: Trieve (Devflow, Inc.)
+    url: https://docs.trieve.ai/api-reference
+servers:
+  - url: https://api.trieve.ai
+    description: Trieve Cloud (production)
+  - url: http://localhost:8090
+    description: Self-hosted (local dev)
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Chunk
+  - name: Dataset
+  - name: File
+  - name: Topic
+  - name: Message
+paths:
+  /api/chunk:
+    post:
+      tags: [Chunk]
+      summary: Create or upsert chunk(s)
+      description: |
+        Creates new chunks. A chunk with the same tracking_id as an existing chunk
+        will cause the request to fail. Bulk uploads are capped at 120 chunks
+        per request.
+      parameters:
+        - in: header
+          name: TR-Dataset
+          required: true
+          schema:
+            type: string
+          description: Dataset UUID or tracking_id targeted by the request.
+      responses:
+        "200":
+          description: Chunk(s) created
+        "400":
+          description: Deserialization error
+        "413":
+          description: Too many chunks (exceeds 120)
+        "426":
+          description: Upgrade required
+  /api/dataset:
+    post:
+      tags: [Dataset]
+      summary: Create a dataset
+      description: |
+        Create a new dataset within an organization. Caller must be an
+        organization owner.
+      responses:
+        "200":
+          description: Dataset created
+  /api/file:
+    post:
+      tags: [File]
+      summary: Upload a file
+      description: |
+        Upload a file to the S3 bucket attached to a dataset. Supports naive
+        chunking via Apache Tika or vision-LLM markdown conversion.
+      parameters:
+        - in: header
+          name: TR-Dataset
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File accepted (async processing)
+  /api/topic:
+    post:
+      tags: [Topic]
+      summary: Create a chat topic
+      description: |
+        Create a new chat topic. Topics coordinate conversation message history
+        of gen-AI chat sessions and are attached to an owner_id.
+      parameters:
+        - in: header
+          name: TR-Dataset
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Topic created
+  /api/message:
+    post:
+      tags: [Message]
+      summary: Create a message
+      description: |
+        Create a message attached to a topic to coordinate memory of gen-AI
+        chat sessions.
+      parameters:
+        - in: header
+          name: TR-Dataset
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Message created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        Trieve API key. User or API key must have admin or owner role on the
+        targeted dataset's organization.
