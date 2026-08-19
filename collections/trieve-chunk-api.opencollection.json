@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Trieve REST Chunk API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Chunk",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create or upsert chunk(s)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/chunk",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Creates new chunks. A chunk with the same tracking_id as an existing chunk\nwill cause the request to fail. Bulk uploads are capped at 120 chunks\nper request.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

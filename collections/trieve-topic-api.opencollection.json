@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Trieve REST Chunk Topic API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topic",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a chat topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trieve.ai/api/topic",
+            "headers": [
+              {
+                "name": "TR-Dataset",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a new chat topic. Topics coordinate conversation message history\nof gen-AI chat sessions and are attached to an owner_id.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

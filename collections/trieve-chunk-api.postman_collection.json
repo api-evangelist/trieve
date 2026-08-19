@@ -1,0 +1,271 @@
+{
+  "item": [
+    {
+      "id": "b7089893-5dc0-4d9f-8f1f-f33db83ca576",
+      "name": "Chunk",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4e311b19-e6b6-440b-9ed5-affc2b00af12",
+          "name": "Create or upsert chunk(s)",
+          "request": {
+            "name": "Create or upsert chunk(s)",
+            "description": {
+              "content": "Creates new chunks. A chunk with the same tracking_id as an existing chunk\nwill cause the request to fail. Bulk uploads are capped at 120 chunks\nper request.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "chunk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Dataset UUID or tracking_id targeted by the request.",
+                "key": "TR-Dataset",
+                "value": "<string>"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "63fd885d-7989-4a18-aca4-cf7e474f3440",
+              "name": "Chunk(s) created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "chunk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Dataset UUID or tracking_id targeted by the request.",
+                    "key": "TR-Dataset",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9925fd18-5755-464c-8b38-d3457fea548d",
+              "name": "Deserialization error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "chunk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Dataset UUID or tracking_id targeted by the request.",
+                    "key": "TR-Dataset",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7ca53290-a2ee-41ac-a7cb-82ee3a0ff209",
+              "name": "Too many chunks (exceeds 120)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "chunk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Dataset UUID or tracking_id targeted by the request.",
+                    "key": "TR-Dataset",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "88893bdc-31a2-418a-a955-1c7c0e2df6bf",
+              "name": "Upgrade required",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "chunk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Dataset UUID or tracking_id targeted by the request.",
+                    "key": "TR-Dataset",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Upgrade Required (RFC 2817)",
+              "code": 426,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.trieve.ai",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "295f4e55-9a70-4bed-bb06-9bc25e8dc32e",
+    "name": "Trieve REST Chunk API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Trieve REST API for search, recommendations, RAG, and analytics. Endpoints\nderived from https://docs.trieve.ai/api-reference and the Redoc spec at\nhttps://api.trieve.ai/redoc.\n\n\nContact Support:\n Name: Trieve (Devflow, Inc.)",
+      "type": "text/plain"
+    }
+  }
+}
