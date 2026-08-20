@@ -31,6 +31,14 @@ tags:
   - Hybrid Search
   - Recommendations
   - Analytics
+  - Open-Source
+tags_raw:
+  - Search
+  - RAG
+  - Vector Search
+  - Hybrid Search
+  - Recommendations
+  - Analytics
   - Open Source
 created: '2026-05-23'
 modified: '2026-05-23'
@@ -73,6 +81,9 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Group
+  - Organization
+  tags_raw:
   - Groups
   - Organization
   properties:
@@ -100,6 +111,11 @@ apis:
   tags:
   - Search
   - Hybrid
+  - Vectors
+  - Full Text
+  tags_raw:
+  - Search
+  - Hybrid
   - Vector
   - Full-Text
   properties:
@@ -113,6 +129,9 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - File
+  - Ingestion
+  tags_raw:
   - Files
   - Ingestion
   properties:
@@ -139,6 +158,10 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Message
+  - RAG
+  - Streaming
+  tags_raw:
   - Messages
   - RAG
   - Streaming
@@ -177,6 +200,10 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Event
+  - Webhook
+  - Async
+  tags_raw:
   - Events
   - Webhooks
   - Async
@@ -200,6 +227,9 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Authentication
+  - Identity
+  tags_raw:
   - Auth
   - Identity
   properties:
@@ -240,6 +270,10 @@ apis:
   humanURL: https://github.com/devflowinc/trieve
   baseURL: https://github.com/devflowinc/trieve
   tags:
+  - Open-Source
+  - Self-Hosted
+  - Rust
+  tags_raw:
   - Open Source
   - Self-Hosted
   - Rust
