@@ -10,6 +10,20 @@ description: >-
   events, analytics, and experiments. Trieve Cloud is hosted at api.trieve.ai;
   the same server can be self-hosted from the devflowinc/trieve repository.
   Official SDKs are published for TypeScript and Python.
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -331,6 +345,16 @@ apis:
   - type: OpenAPI
     url: openapi/trieve-topic-api-openapi.yml
 common:
+  - type: IssueTracker
+    url: https://github.com/devflowinc/trieve/issues
+  - type: Releases
+    url: https://github.com/devflowinc/trieve/releases
+  - type: SecurityPolicy
+    url: https://github.com/devflowinc/trieve/blob/main/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/devflowinc/trieve/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/devflowinc/trieve/blob/main/CONTRIBUTING.md
   - type: License
     name: MIT
     url: https://github.com/devflowinc/trieve/blob/main/LICENSE
