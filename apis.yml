@@ -159,6 +159,10 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Topic
+  - Chat
+  - RAG
+  tags_raw:
   - Topics
   - Chat
   - RAG
@@ -311,6 +315,8 @@ apis:
   humanURL: https://docs.trieve.ai/api-reference
   baseURL: https://api.trieve.ai
   tags:
+  - Datasets
+  tags_raw:
   - Dataset
   properties:
   - type: OpenAPI
