@@ -1,14 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Trieve REST Chunk File API
+  title: Trieve REST File API
   version: '1'
   description: 'Trieve REST API for search, recommendations, RAG, and analytics. Endpoints
 
     derived from https://docs.trieve.ai/api-reference and the Redoc spec at
 
-    https://api.trieve.ai/redoc.
-
-    '
+    https://api.trieve.ai/redoc.'
   contact:
     name: Trieve (Devflow, Inc.)
     url: https://docs.trieve.ai/api-reference
@@ -29,9 +27,7 @@ paths:
       summary: Upload a file
       description: 'Upload a file to the S3 bucket attached to a dataset. Supports naive
 
-        chunking via Apache Tika or vision-LLM markdown conversion.
-
-        '
+        chunking via Apache Tika or vision-LLM markdown conversion.'
       parameters:
       - in: header
         name: TR-Dataset
@@ -41,6 +37,8 @@ paths:
       responses:
         '200':
           description: File accepted (async processing)
+      operationId: postApiFile
+      x-operation-id-source: derived
 components:
   securitySchemes:
     ApiKeyAuth:

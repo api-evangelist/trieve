@@ -1,14 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Trieve REST Chunk Dataset API
+  title: Trieve REST Dataset API
   version: '1'
   description: 'Trieve REST API for search, recommendations, RAG, and analytics. Endpoints
 
     derived from https://docs.trieve.ai/api-reference and the Redoc spec at
 
-    https://api.trieve.ai/redoc.
-
-    '
+    https://api.trieve.ai/redoc.'
   contact:
     name: Trieve (Devflow, Inc.)
     url: https://docs.trieve.ai/api-reference
@@ -29,12 +27,12 @@ paths:
       summary: Create a dataset
       description: 'Create a new dataset within an organization. Caller must be an
 
-        organization owner.
-
-        '
+        organization owner.'
       responses:
         '200':
           description: Dataset created
+      operationId: postApiDataset
+      x-operation-id-source: derived
 components:
   securitySchemes:
     ApiKeyAuth:

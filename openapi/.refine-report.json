@@ -1,11 +1,7 @@
 {
   "provider": "trieve",
   "sources": [
-    "trieve-chunk-api-openapi.yml",
-    "trieve-dataset-api-openapi.yml",
-    "trieve-file-api-openapi.yml",
-    "trieve-message-api-openapi.yml",
-    "trieve-topic-api-openapi.yml"
+    "_original/trieve-openapi.yml"
   ],
   "outputs": [
     "trieve-chunk-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "trieve-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "trieve-chunk-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "trieve-dataset-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "trieve-file-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "trieve-message-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "trieve-topic-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
