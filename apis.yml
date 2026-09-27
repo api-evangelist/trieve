@@ -46,7 +46,7 @@ tags:
   - Hybrid Search
   - Recommendations
   - Analytics
-  - Open-Source
+  - Open Source
 tags_raw:
   - Search
   - RAG
@@ -55,6 +55,7 @@ tags_raw:
   - Recommendations
   - Analytics
   - Open Source
+  - Open-Source
 created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.23'
@@ -289,13 +290,14 @@ apis:
   humanURL: https://github.com/devflowinc/trieve
   baseURL: https://github.com/devflowinc/trieve
   tags:
-  - Open-Source
+  - Open Source
   - Self-Hosted
   - Rust
   tags_raw:
   - Open Source
   - Self-Hosted
   - Rust
+  - Open-Source
   properties:
   - type: Repository
     url: https://github.com/devflowinc/trieve
