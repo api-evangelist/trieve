@@ -391,6 +391,8 @@ common:
     url: https://trieve.ai/blog
   - type: LlmsText
     url: https://docs.trieve.ai/llms.txt
+  - type: SpectralRules
+    url: https://github.com/devflowinc/trieve/blob/a99b21e23f21025757b44efb594676c4a7b7495f/.github/rules.yaml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
