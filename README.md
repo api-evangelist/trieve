@@ -1,4 +1,4 @@
-# Trieve (trieve)
+# Trieve
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,333 +66,148 @@
 
 Trieve (Devflow, Inc.) is an open-source, all-in-one search, recommendations, RAG, and analytics platform delivered as a REST API. The backend is written in Rust (Actix-web) and exposes endpoints for managing organizations, datasets, chunks, chunk groups, files, search, topics / messages (LLM chat), web crawls, events, analytics, and experiments. Trieve Cloud is hosted at api.trieve.ai; the same server can be self-hosted from the devflowinc/trieve repository. Official SDKs are published for TypeScript and Python.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/apis.yml)
+**Areas:** Search · RAG · Vector Search · Hybrid Search · Recommendations · Analytics · Open Source
 
-## Tags
+## Trieve on APIs.io
 
-- Search
-- RAG
-- Vector Search
-- Hybrid Search
-- Recommendations
-- Analytics
-- Open Source
+Everything profiled for Trieve is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/trieve/](https://apis.io/providers/trieve/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (21)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [Trieve REST API](https://apis.io/apis/trieve/rest-api/) — Production REST API for Trieve Cloud. Organizes resources around organizations, datasets, chunks, chunk groups, files, search, topics, messages, crawls,…
+- [Trieve Chunk API](https://apis.io/apis/trieve/chunk/) — Manage chunks - the individual searchable units of content stored in a dataset - including create, update, delete, get, and bulk operations.
+- [Trieve Chunk Group API](https://apis.io/apis/trieve/chunk-group/) — Group chunks into bookmark-style folders for organization, recommendations, and group-scoped search within a dataset.
+- [Trieve Dataset API](https://apis.io/apis/trieve/dataset/) — Create and configure datasets that hold chunks, chunk groups, and search / RAG configuration for a workload.
+- [Trieve Search API](https://apis.io/apis/trieve/search/) — Run vector, full-text, and hybrid search across a dataset, with filters, boosts, re-ranking, and highlights.
+- [Trieve File API](https://apis.io/apis/trieve/file/) — Upload files (up to 1 GB), extract text, and chunk them into a dataset. Asynchronous - completion is signaled via the Events API.
+- [Trieve Topic API](https://apis.io/apis/trieve/topic/) — Topics persist conversational state for generative-AI chat sessions backed by a Trieve dataset.
+- [Trieve Message API](https://apis.io/apis/trieve/message/) — Messages are turns within a topic; the Message API drives RAG completions, streaming responses, and citation-aware chat against a dataset.
+- [Trieve Crawl API](https://apis.io/apis/trieve/crawl/) — Create and manage web crawls that ingest pages into a dataset for search and RAG.
+- [Trieve Analytics API](https://apis.io/apis/trieve/analytics/) — Query search and RAG analytics - top queries, no-result queries, latency, click-through, and experiment outcomes.
+- [Trieve Events API](https://apis.io/apis/trieve/events/) — Server-sent notifications about asynchronous work such as file processing, crawl completion, and chunk ingestion.
+- [Trieve Organization API](https://apis.io/apis/trieve/organization/) — Manage organizations, roles, and members.
+- [Trieve Auth API](https://apis.io/apis/trieve/auth/) — Registration, login, and session handling for Trieve users.
+- [Trieve TypeScript SDK](https://apis.io/apis/trieve/typescript-sdk/) — Official TypeScript / JavaScript client library for the Trieve REST API.
+- [Trieve Python SDK](https://apis.io/apis/trieve/python-sdk/) — Official Python client library (trieve-py-client) for the Trieve REST API.
+- [Trieve Open Source Server](https://apis.io/apis/trieve/open-source/) — Self-hostable Trieve server (Rust / Actix-web), dashboard, search and chat UIs, ingestion / file / delete workers, batch-ETL utilities, pdf2md converter,…
+- [Trieve Chunk API](https://apis.io/apis/trieve/trieve-chunk-api/) — The Chunk API from Trieve — 1 operation(s) for chunk.
+- [Trieve Dataset API](https://apis.io/apis/trieve/trieve-dataset-api/) — The Dataset API from Trieve — 1 operation(s) for dataset.
+- [Trieve File API](https://apis.io/apis/trieve/trieve-file-api/) — The File API from Trieve — 1 operation(s) for file.
+- [Trieve Message API](https://apis.io/apis/trieve/trieve-message-api/) — The Message API from Trieve — 1 operation(s) for message.
+- [Trieve Topic API](https://apis.io/apis/trieve/trieve-topic-api/) — The Topic API from Trieve — 1 operation(s) for topic.
 
-## APIs
+### Published properties
 
-### Trieve REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Production REST API for Trieve Cloud. Organizes resources around organizations, datasets, chunks, chunk groups, files, search, topics, messages, crawls, analytics, events, experiments, and billing. Documented with OpenAPI and rendered via Redoc.
+#### Agentic access (1)
 
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Trieve Agentic Access](https://apis.io/agentic-access/trieve/trieve-agentic-access/)
 
-- REST
-- OpenAPI
+#### Collections (6)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Redoc](https://api.trieve.ai/redoc)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Trieve REST API](https://apis.io/collections/trieve/open-trieve/)
+- [Trieve REST Chunk API](https://apis.io/collections/trieve/open-trieve-chunk-api/)
+- [Trieve REST Chunk Dataset API](https://apis.io/collections/trieve/open-trieve-dataset-api/)
+- [Trieve REST Chunk File API](https://apis.io/collections/trieve/open-trieve-file-api/)
+- [Trieve REST Chunk Message API](https://apis.io/collections/trieve/open-trieve-message-api/)
+- [Trieve REST Chunk Topic API](https://apis.io/collections/trieve/open-trieve-topic-api/)
 
-### Trieve Chunk API
+#### Governance rules (1)
 
-Manage chunks - the individual searchable units of content stored in a dataset - including create, update, delete, get, and bulk operations.
+Spectral rulesets for the provider's contracts.
 
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
+- [Trieve — trieve rules](https://apis.io/rules/trieve/trieve-trieve-spectral-rules/)
 
-#### Tags
+#### Security (2)
 
-- Chunks
-- Content
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Trieve Authentication](https://apis.io/security/trieve/trieve-authentication/)
+- [Trieve Domain Security](https://apis.io/security/trieve/trieve-domain-security/)
 
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Trieve Chunk Group API
+Published plans, tiers and prices.
 
-Group chunks into bookmark-style folders for organization, recommendations, and group-scoped search within a dataset.
+- [Trieve Plans Pricing](https://apis.io/plans/trieve/trieve-plans-pricing/)
 
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Groups
-- Organization
+- [Trieve Rate Limits](https://apis.io/rate-limits/trieve/trieve-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Trieve Dataset API
+- [Trieve Finops](https://apis.io/finops/trieve/trieve-finops/)
 
-Create and configure datasets that hold chunks, chunk groups, and search / RAG configuration for a workload.
+## Where to find this API
 
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Datasets
-- Configuration
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Search API
-
-Run vector, full-text, and hybrid search across a dataset, with filters, boosts, re-ranking, and highlights.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Search
-- Hybrid
-- Vector
-- Full-Text
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve File API
-
-Upload files (up to 1 GB), extract text, and chunk them into a dataset. Asynchronous - completion is signaled via the Events API.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Files
-- Ingestion
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Topic API
-
-Topics persist conversational state for generative-AI chat sessions backed by a Trieve dataset.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Topics
-- Chat
-- RAG
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Message API
-
-Messages are turns within a topic; the Message API drives RAG completions, streaming responses, and citation-aware chat against a dataset.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Messages
-- RAG
-- Streaming
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Crawl API
-
-Create and manage web crawls that ingest pages into a dataset for search and RAG.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Crawl
-- Ingestion
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Analytics API
-
-Query search and RAG analytics - top queries, no-result queries, latency, click-through, and experiment outcomes.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Analytics
-- Search Analytics
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Events API
-
-Server-sent notifications about asynchronous work such as file processing, crawl completion, and chunk ingestion.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Events
-- Webhooks
-- Async
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Organization API
-
-Manage organizations, roles, and members.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Organization
-- Admin
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Auth API
-
-Registration, login, and session handling for Trieve users.
-
-- **Human URL:** [https://docs.trieve.ai/api-reference](https://docs.trieve.ai/api-reference)
-- **Base URL:** `https://api.trieve.ai`
-
-#### Tags
-
-- Auth
-- Identity
-
-#### Properties
-
-- [Documentation](https://docs.trieve.ai/api-reference)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve TypeScript SDK
-
-Official TypeScript / JavaScript client library for the Trieve REST API.
-
-- **Human URL:** [https://ts-sdk.trieve.ai](https://ts-sdk.trieve.ai)
-- **Base URL:** `https://github.com/devflowinc/trieve`
-
-#### Tags
-
-- SDK
-- TypeScript
-- JavaScript
-
-#### Properties
-
-- [Documentation](https://ts-sdk.trieve.ai)
-- [Repository](https://github.com/devflowinc/trieve)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Python SDK
-
-Official Python client library (trieve-py-client) for the Trieve REST API.
-
-- **Human URL:** [https://pypi.org/project/trieve-py-client/](https://pypi.org/project/trieve-py-client/)
-- **Base URL:** `https://github.com/devflowinc/trieve`
-
-#### Tags
-
-- SDK
-- Python
-
-#### Properties
-
-- [Documentation](https://pypi.org/project/trieve-py-client/)
-- [Repository](https://github.com/devflowinc/trieve)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Trieve Open Source Server
-
-Self-hostable Trieve server (Rust / Actix-web), dashboard, search and chat UIs, ingestion / file / delete workers, batch-ETL utilities, pdf2md converter, and Helm charts for Kubernetes deployment.
-
-- **Human URL:** [https://github.com/devflowinc/trieve](https://github.com/devflowinc/trieve)
-- **Base URL:** `https://github.com/devflowinc/trieve`
-
-#### Tags
-
-- Open Source
-- Self-Hosted
-- Rust
-
-#### Properties
-
-- [Repository](https://github.com/devflowinc/trieve)
-- [Postman Collection](collections/trieve.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/trieve.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://trieve.ai/)
 - [Documentation](https://docs.trieve.ai/)
-- [Git Hub](https://github.com/devflowinc)
 - [Pricing](https://trieve.ai/pricing)
 - [Blog](https://trieve.ai/blog)
-- [L L Ms Txt](https://docs.trieve.ai/llms.txt)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 40.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 47.6 |
+| Contract governance | 15.2 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 22.6 |
+| Access clarity | 10.5 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/trieve/](https://apis.io/providers/trieve/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Trieve: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/trieve/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
